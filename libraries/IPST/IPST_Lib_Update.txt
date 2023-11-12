@@ -1,0 +1,142 @@
+2016.06.18
+add: include dsp4s.h
+add: include gp2d120.h
+fix: error on motor defined
+
+2016.03.06
+[Add]
+// SW1 function
+int sw_1()			alias to	sw1()
+int sw_1_press()	alias to	sw_1_press()
+
+// Compass function
+void compass_init()
+int compass_read()			// read Absolute earth magnetic direction
+void compass_set_heading() // preset Reference heading to 0
+void compass_read_heading() // read calculated heading direction +-180
+void compass_writeConfig() // write internal adjust RAM data to EEPROM
+void compass_writeConfig(int minX,int maxX,int minY,int maxY) // force parameter write to EEPROM
+void compass_readConfig() // read EEPROM from Controller 
+void compass_scan(unsigned int time) // collect data for calibration within defined time
+void compass_factoryReset() // preload EEPROM value on Controller
+void compass_disableAutoTuning() // disable auto adjust during read
+void compass_enableAutoTuning()	// enable auto adjust during read
+
+// Encoder function
+void encoder_reset(int channel)	// clear channel's value to 0
+void encoder(int channel,int preloadValue)	// preset channel's value
+unsigned int encoder(int channel) // read current value of channel
+
+// Serial function
+uart_readLast();	// read last byte on UART
+uart1_readLast();	// ready last byte on UART1
+uart(unsigned long baud)	alias to	uart_set_baud(unsigned long baud)
+uart1(unsigned long baud)	alias to	uart1_set_baud(unsigned long baud)
+
+// POP-X2 motor alias
+motor(int channel, int speed);
+	// channel= 1,2,3,4,12,34,1234,ALL(=ALL2),ALL2,ALL4
+
+	
+	
+	
+2015.07.10
+[Fixed]
+Back to 2 motor control
+
+2015.04.09
+[Fixed]
+Motor defined on IPST PlusPlus
+
+2014.08.05
+[Update]
+ipst_servoMotor.h : Add alias number of digital pin 12..15 to servo 3..0
+
+[IPST-SE Block]
+v20140806 (alpha) : change font style
+
+2014.08.05
+[Update]
+new USB Driver installer 2.10.00
+
+2014.07.22
+[Update]
+New titled for specific ArduBlock for IPST-SE as "IPST-SE Block"
+Alpha release v20140721
+
+2014.07.18
+[Preview release]
+ArduBlock IPST-SE edition (alpha) v20140718
+  - Add Bitwise operation
+  - Add some necessary conversion block
+
+2014.07.17
+[Preview release]
+ArduBlock IPST-SE edition (alpha) v20140717
+
+2014.02.24
+[New library] ipst_sonar.h : HC-SR04 Ultrasonic distance sensor
+  function:	unsigned int sonar(void); // get distance in cm. unit , use default pin Trig->17,Echo->19
+	unsigned int sonar(int TrigPin,int EchoPin); // get distance in cm. unit, specific I/O pins
+  
+[New library] ipst_gp2d120_lib.h : GP2D120 Infrared distance sensor
+  function:	unsigned int getdist(int analogPin); // get distance in cm. unit , specific to Analog input pin
+
+2013.12.09
+[New library dsp4s.h (another folder): Serial 7-Segment display 4 digit with colon and ' symbol
+
+[Modified]
+SetFloatPrecision(unsigned int precisionPoint)	// Set float precision printed on SLCD, GLCD, DSP4S using %f
+
+GLCD can use %f (Float refer to SetFolatPrecision, default=3), %h (HEX), %b (BIN)
+
+2013.08.19
+[Platform]
+ported all library to Arduino 1.0
+
+2013.08.07
+[Add]
+servoSleep(unsigned int time)	// Servo refreshment  while delay
+servoSleep(void)	// Servo refreshment only 1 trigger pulse
+servoRefresh(void)	// Servo refreshment  while delay
+
+[Add robot movement]
+
+
+2013.07.15
+Set default baudrate UART to 9600bps
+
+2013.04.09
+rebuild library for backward IPST++ ATMega16/32 compatible
+
+2013.03.29
+[overloaded function]
+int	knob(int range)	// [overloaded] Knob scaled to defined parameter (default = 0-1023 , SW_OK included)
+int	knob(int CCWvalue,int CWvalue) 	// [overloaded] Knob scaled within defined range CCW-CW parameter
+
+[overloaded function]
+void	(char ch,int pow,int step)	// [overloaded] Motor control speed accelerate/decelerate from last motor speed, parameter "step" delay in (ms)
+
+*********************
+2013.03.25
+[new GLCD function]
+void	glcdSetColorWordRGB( )	// set OLD 1.8" display using color register format RGB
+void	glcdSetColorWordBGR( )	// (default) set NEW 1.8" display using color register format BGR => transform to RGB
+
+[overloaded function]
+void	glcdConfig(int ColorMode)	// [overloaded] ColorMode parameter 0 = RGB , 1 = BGR (default on initialized)
+
+[update] implicit GLCD first initialize now default to new BGR mode if void parameter (backward compatible)
+
+[replace fuction	ipst_in_out.h]	// replace old MACRO with function
+int	sw1(void)
+void	sw1_press(void)
+
+[replace function	ipst_analog.h]	// replace old MACRO with function
+int	sw_OK(void)
+void	sw_OK_press(void)
+
+[remark]
+port (20) while run as INPUT, user dont' set internal pull-up PB4 = 1,
+    This will cause system freezed by SPI SS slave select pin switch over internal SPI hardware
+    (OUTPUT pin mode not affect)

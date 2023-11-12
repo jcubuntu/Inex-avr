@@ -1,0 +1,41 @@
+2013.12.09
+[New library dsp4s.h (another folder): Serial 7-Segment display 4 digit with colon and ' symbol
+
+[Modified]
+SetFloatPrecision(unsigned int precisionPoint)	// Set float precision printed on SLCD, GLCD, DSP4S using %f
+
+GLCD can use %f (Float refer to SetFolatPrecision, default=3), %h (HEX), %b (BIN)
+
+2013.08.19
+[Platform]
+ported all library to Arduino 1.0
+
+2013.08.07
+[Add]
+servoSleep(unsigned int time)	// Servo refreshment  while delay
+servoSleep(void)	// Servo refreshment only 1 trigger pulse
+servoRefresh(void)	// Servo refreshment  while delay
+
+[Add robot movement]
+
+2013.07.15
+Set default baudrate UART to 9600bps
+
+2013.03.29
+[overloaded function]
+int	knob(int range)	// [overloaded] Knob scaled to defined parameter (default = 0-1023 , SW_OK included)
+int	knob(int CCWvalue,int CWvalue) 	// [overloaded] Knob scaled within defined range CCW-CW parameter
+
+[overloaded function]
+void	(char ch,int pow,int step)	// [overloaded] Motor control speed accelerate/decelerate from last motor speed, parameter "step" delay in (ms)
+
+*********************
+2013.03.25
+[new GLCD function]
+void	glcdSetColorWordRGB( )	// set OLD 1.8" display using color register format RGB
+void	glcdSetColorWordBGR( )	// (default) set NEW 1.8" display using color register format BGR => transform to RGB
+
+[overloaded function]
+void	glcdConfig(int ColorMode)	// [overloaded] ColorMode parameter 0 = RGB , 1 = BGR (default on initialized)
+
+[update] implicit GLCD first initialize now default to new BGR mode if void parameter (backward compatible)

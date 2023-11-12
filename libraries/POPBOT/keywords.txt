@@ -1,0 +1,109 @@
+#######################################
+# Syntax Coloring Map For Robot
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+popbot	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+#--------------------------------------
+# Library sm.h
+#--------------------------------------
+Sm	KEYWORD2
+attach	KEYWORD2
+detach	KEYWORD2
+write	KEYWORD2
+read	KEYWORD2
+attached	KEYWORD2
+end	KEYWORD2
+start	KEYWORD2
+service	KEYWORD2
+#--------------------------------------
+# Library compass.h
+#--------------------------------------
+compass	KEYWORD2
+compass_init	KEYWORD2
+compass_read	KEYWORD2
+compass_set_heading	KEYWORD2
+compass_read_heading	KEYWORD2
+#--------------------------------------
+# Library sleep.h
+#--------------------------------------
+sleep	KEYWORD2
+#--------------------------------------
+# Library in_out.h
+#--------------------------------------
+in_out	KEYWORD2
+out	KEYWORD2
+in	KEYWORD2
+#--------------------------------------
+# Library lcd.h
+#--------------------------------------
+slcd	KEYWORD2
+lcd	KEYWORD2
+LCD	KEYWORD2
+printf	KEYWORD2
+lcd_command	KEYWORD2
+lcd_text	KEYWORD2
+lcd_puts	KEYWORD2
+lcd_putc	KEYWORD2
+#--------------------------------------
+# Library motor.h
+#--------------------------------------
+motor	KEYWORD2
+motor_stop	KEYWORD2
+ao	KEYWORD2
+off	KEYWORD2
+ALL	KEYWORD2
+#--------------------------------------
+# Library sevo_motor.h
+#--------------------------------------
+servo_motor	KEYWORD2
+servo	KEYWORD2
+servo_read	KEYWORD2
+servo_get_status	KEYWORD2
+servo_stop	KEYWORD2
+#--------------------------------------
+# Library analog.h
+#--------------------------------------
+analog	KEYWORD2
+#--------------------------------------
+# Library sound.h
+#--------------------------------------
+sound	KEYWORD2
+beep	KEYWORD2
+#--------------------------------------
+# Library serial.h
+#--------------------------------------
+serial	KEYWORD2
+uart_set_baud	KEYWORD2
+uart1_set_baud	KEYWORD2
+uart_get_baud	KEYWORD2
+uart1_get_baud	KEYWORD2
+uart_putc	KEYWORD2
+uart1_putc	KEYWORD2
+uart_puts	KEYWORD2
+uart1_puts	KEYWORD2
+uart	KEYWORD2
+uart1	KEYWORD2
+uart_available	KEYWORD2
+uart1_available	KEYWORD2
+uart_getkey	KEYWORD2
+uart1_getkey	KEYWORD2
+#--------------------------------------
+# Library gp2d120_lib.h
+#--------------------------------------
+gp2d120_lib       KEYWORD2
+getdist	KEYWORD2
+#--------------------------------------
+# Library nunchuk_lib.h
+#--------------------------------------
+#######################################
+# Constants (LITERAL1)
+#######################################
+

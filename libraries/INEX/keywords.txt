@@ -1,0 +1,59 @@
+#######################################
+# Syntax Coloring Map For DSP4S
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+compass	KEYWORD2
+
+#######################################
+# Methods and Functions (KEYWORD1)
+#######################################
+#--------------------------------------
+# Library inex_serial.h
+#--------------------------------------
+serial	KEYWORD2
+serial1	KEYWORD2
+uart_set_baud	KEYWORD2
+uart1_set_baud	KEYWORD2
+uart_get_baud	KEYWORD2
+uart1_get_baud	KEYWORD2
+uart_putc	KEYWORD2
+uart1_putc	KEYWORD2
+uart_puts	KEYWORD2
+uart1_puts	KEYWORD2
+uart_write	KEYWORD2
+uart1_write	KEYWORD2
+uart_read	KEYWORD2
+uart1_read	KEYWORD2
+uart_ready	KEYWORD2
+uart1_ready	KEYWORD2
+uart	KEYWORD2
+uart1	KEYWORD2
+uart_available	KEYWORD2
+uart1_available	KEYWORD2
+uart_getkey	KEYWORD2
+uart1_getkey	KEYWORD2
+uart_flush	KEYWORD1
+uart1_flush	KEYWORD1
+
+#--------------------------------------
+# Library gp2d120.h
+#--------------------------------------
+gp2d120	KEYWORD1
+getdist	KEYWORD2
+#--------------------------------------
+# Library inex_led8.h
+#--------------------------------------
+pinLED8	KEYWORD2
+LED8	KEYWORD2
+#--------------------------------------
+# Library mcp9701.h
+#--------------------------------------
+read_temp	KEYWORD2
+read_temp_float	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

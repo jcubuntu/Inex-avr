@@ -1,0 +1,47 @@
+#######################################
+# Syntax Coloring Map For DSP4S
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+compass	KEYWORD2
+
+#######################################
+# Methods and Functions (KEYWORD1)
+#######################################
+compass_init	KEYWORD2
+compass_read	KEYWORD2
+compass_rawX	KEYWORD2
+compass_rawY	KEYWORD2
+compass_rawZ	KEYWORD2
+compass_set_heading	KEYWORD2
+compass_read_heading	KEYWORD2
+compass_writeConfig	KEYWORD2
+compass_readConfig	KEYWORD2
+compass_scan	KEYWORD2
+compass_factoryReset	KEYWORD2
+compass_disableAutoTuning	KEYWORD2
+compass_enableAutoTuning	KEYWORD2
+cmps03_read	KEYWORD2
+cmps03_set_heading	KEYWORD2
+cmps03_read_heading	KEYWORD2
+cmps03_pwm_read	KEYWORD2
+cmps03_pwm_set_heading	KEYWORD2
+cmps03_pwm_read_heading	KEYWORD2
+
+cmps11_mode	KEYWORD2
+MODE_I2C	KEYWORD2
+MODE_SERIAL	KEYWORD2
+cmps11_read	KEYWORD2
+cmps11_set_heading	KEYWORD2
+cmps11_read_heading	KEYWORD2
+cmps11_read_pitch	KEYWORD2
+cmps11_read_roll	KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+HMC6352	LITERAL1	Constants
+HMC5883	LITERAL1	Constants
+HMC5983	LITERAL1	Constants
